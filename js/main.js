@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all functions
     initLoader();
     initNavigation();
+    initMobileDrawer();
     initHeroSlider();
     initFloatingSocial();
     initScrollEffects();
@@ -34,20 +35,23 @@ function initNavigation() {
     const navMenu = document.getElementById('navMenu');
     const dropdowns = document.querySelectorAll('.dropdown');
     
-    // Mobile menu toggle
+    // Keep legacy toggle for desktop behavior
     if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
+        navToggle.addEventListener('click', function(e) {
+            // Prevent legacy menu from opening on mobile; drawer will handle it
+            if (window.innerWidth <= 768) return;
             navToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
     }
     
-    // Mobile dropdown toggle
+    // Mobile dropdown toggle (desktop only here; mobile uses drawer)
     dropdowns.forEach(dropdown => {
         const link = dropdown.querySelector('.nav-link');
         if (link) {
             link.addEventListener('click', function(e) {
-                if (window.innerWidth <= 768) {
+                if (window.innerWidth <= 768) return; // drawer handles mobile
+                if (window.innerWidth <= 1024) {
                     e.preventDefault();
                     dropdown.classList.toggle('active');
                 }
@@ -55,9 +59,10 @@ function initNavigation() {
         }
     });
     
-    // Close menu when clicking outside
+    // Close menu when clicking outside (desktop only)
     document.addEventListener('click', function(e) {
-        if (!navToggle.contains(e.target) && !navMenu.contains(e.target)) {
+        if (window.innerWidth <= 768) return;
+        if (navToggle && navMenu && !navToggle.contains(e.target) && !navMenu.contains(e.target)) {
             navToggle.classList.remove('active');
             navMenu.classList.remove('active');
         }
@@ -72,6 +77,91 @@ function initNavigation() {
         } else {
             header.style.background = 'white';
             header.style.backdropFilter = 'none';
+        }
+    });
+}
+
+// ===== Mobile Drawer =====
+function initMobileDrawer() {
+    const navToggle = document.getElementById('navToggle');
+    const drawer = document.getElementById('mobileDrawer');
+    const backdrop = document.getElementById('drawerBackdrop');
+    const drawerClose = document.getElementById('drawerClose');
+    const desktopMenu = document.getElementById('navMenu');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    if (!navToggle || !drawer || !backdrop || !drawerClose || !desktopMenu || !mobileMenu) return;
+
+    // Build mobile menu by cloning desktop nav (keep classes for dropdown behavior)
+    function rebuildMobileMenu() {
+        mobileMenu.innerHTML = '';
+        const clone = desktopMenu.cloneNode(true);
+        clone.removeAttribute('id');
+        // Normalize class names for mobile styling
+        clone.classList.remove('nav-menu');
+        clone.classList.add('mobile-menu');
+        // Move children into mobileMenu
+        [...clone.children].forEach(li => mobileMenu.appendChild(li));
+        attachAccordionHandlers();
+    }
+
+    function openDrawer() {
+        document.body.classList.add('menu-open');
+        drawer.classList.add('active');
+        backdrop.classList.add('active');
+        drawer.setAttribute('aria-hidden', 'false');
+        backdrop.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeDrawer() {
+        document.body.classList.remove('menu-open');
+        drawer.classList.remove('active');
+        backdrop.classList.remove('active');
+        drawer.setAttribute('aria-hidden', 'true');
+        backdrop.setAttribute('aria-hidden', 'true');
+    }
+
+    function attachAccordionHandlers() {
+        // Toggle first-level dropdowns
+        mobileMenu.querySelectorAll('.dropdown > a').forEach(anchor => {
+            anchor.addEventListener('click', e => {
+                e.preventDefault();
+                const parent = anchor.closest('.dropdown');
+                parent.classList.toggle('active');
+            });
+        });
+        // Toggle second-level dropdowns
+        mobileMenu.querySelectorAll('.dropdown-submenu > a').forEach(anchor => {
+            anchor.addEventListener('click', e => {
+                e.preventDefault();
+                const parent = anchor.closest('.dropdown-submenu');
+                parent.classList.toggle('active');
+            });
+        });
+    }
+
+    // Open drawer on hamburger click (mobile only)
+    navToggle.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+            e.preventDefault();
+            if (!drawer.classList.contains('active')) rebuildMobileMenu();
+            openDrawer();
+        }
+    });
+
+    // Close handlers
+    drawerClose.addEventListener('click', closeDrawer);
+    backdrop.addEventListener('click', closeDrawer);
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && drawer.classList.contains('active')) {
+            closeDrawer();
+        }
+    });
+
+    // Rebuild on resize to keep items in sync
+    window.addEventListener('resize', function() {
+        if (window.innerWidth <= 768 && drawer.classList.contains('active')) {
+            rebuildMobileMenu();
         }
     });
 }
