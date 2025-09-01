@@ -11,31 +11,75 @@ def update_html_file(file_path):
     try:
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
+
+        changed = False
         
-        # التحقق من وجود hover-fix.css
+        # إضافة mobile-drawer.css بعد responsive.css إن لم تكن موجودة
+        if 'mobile-drawer.css' not in content:
+            new_content, n = re.subn(
+                r'(<link rel="stylesheet" href="css/responsive\.css">)',
+                r'\1\n    <link rel="stylesheet" href="css/mobile-drawer.css">',
+                content
+            )
+            if n > 0:
+                content = new_content
+                changed = True
+                print(f"✅ تم إضافة mobile-drawer.css إلى {file_path}")
+
+        # التحقق من وجود hover-fix.css وإضافته بعد responsive.css إذا غاب
         if 'hover-fix.css' not in content:
-            # إضافة hover-fix.css بعد responsive.css
-            content = re.sub(
+            new_content, n = re.subn(
                 r'(<link rel="stylesheet" href="css/responsive\.css">)',
                 r'\1\n    <link rel="stylesheet" href="css/hover-fix.css">',
                 content
             )
-            print(f"✅ تم إضافة hover-fix.css إلى {file_path}")
+            if n > 0:
+                content = new_content
+                changed = True
+                print(f"✅ تم إضافة hover-fix.css إلى {file_path}")
         
-        # التحقق من وجود hover-fix.js
-        if 'hover-fix.js' not in content:
-            # إضافة hover-fix.js بعد main.js
-            content = re.sub(
+        # إضافة كتلة الـ Drawer بعد إغلاق الهيدر مباشرة إذا لم تكن موجودة
+        if 'id="mobileDrawer"' not in content:
+            drawer_block = (
+                '\n    <!-- Backdrop and Mobile Drawer -->\n'
+                '    <div class="backdrop" id="drawerBackdrop" aria-hidden="true"></div>\n\n'
+                '    <aside id="mobileDrawer" class="mobile-drawer" aria-hidden="true" role="navigation" dir="rtl">\n'
+                '      <div class="drawer-header">\n'
+                '        <button class="drawer-close" id="drawerClose" aria-label="إغلاق القائمة">\n'
+                '          <i class="fas fa-times"></i>\n'
+                '        </button>\n'
+                '      </div>\n'
+                '      <nav class="mobile-nav">\n'
+                '        <ul class="mobile-menu" id="mobileMenu"></ul>\n'
+                '      </nav>\n'
+                '    </aside>\n\n'
+            )
+            new_content, n = re.subn(r'(</header>\s*)', r"</header>\n" + drawer_block, content, count=1)
+            if n == 0:
+                # كحل بديل: إدراج قبل أول قسم رئيسي معروف
+                new_content, n = re.subn(r'(<!-- Breadcrumb -->|<main|<section)', drawer_block + r'\1', content, count=1)
+            if n > 0:
+                content = new_content
+                changed = True
+                print(f"✅ تم إدراج كتلة القائمة الجانبية في {file_path}")
+
+        # التحقق من وجود hover-fix.js بعد main.js إذا كان main.js موجود
+        if 'hover-fix.js' not in content and 'js/main.js' in content:
+            new_content, n = re.subn(
                 r'(<script src="js/main\.js"></script>)',
                 r'\1\n    <script src="js/hover-fix.js"></script>',
                 content
             )
-            print(f"✅ تم إضافة hover-fix.js إلى {file_path}")
+            if n > 0:
+                content = new_content
+                changed = True
+                print(f"✅ تم إضافة hover-fix.js إلى {file_path}")
         
-        # حفظ الملف المحدث
-        with open(file_path, 'w', encoding='utf-8') as f:
-            f.write(content)
-            
+        # حفظ الملف فقط إذا حدث تغيير
+        if changed:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(content)
+        
         return True
         
     except Exception as e:

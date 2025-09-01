@@ -18,6 +18,7 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/mobile-drawer.css">
     <link rel="stylesheet" href="css/hover-fix.css">
 
     <!-- Fonts -->
@@ -137,7 +138,21 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Backdrop and Mobile Drawer -->
+    <div class="backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+    <aside id="mobileDrawer" class="mobile-drawer" aria-hidden="true" role="navigation" dir="rtl">
+      <div class="drawer-header">
+        <button class="drawer-close" id="drawerClose" aria-label="إغلاق القائمة">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <nav class="mobile-nav">
+        <ul class="mobile-menu" id="mobileMenu"></ul>
+      </nav>
+    </aside>
+
+<!-- Hero Section -->
     <section class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content">

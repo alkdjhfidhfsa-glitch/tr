@@ -18,6 +18,7 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/mobile-drawer.css">
     <link rel="stylesheet" href="css/hover-fix.css">
     
     <!-- Favicon -->
@@ -151,7 +152,21 @@
         </div>
     </header>
 
-    <!-- Breadcrumb -->
+    <!-- Backdrop and Mobile Drawer -->
+    <div class="backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+    <aside id="mobileDrawer" class="mobile-drawer" aria-hidden="true" role="navigation" dir="rtl">
+      <div class="drawer-header">
+        <button class="drawer-close" id="drawerClose" aria-label="إغلاق القائمة">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <nav class="mobile-nav">
+        <ul class="mobile-menu" id="mobileMenu"></ul>
+      </nav>
+    </aside>
+
+<!-- Breadcrumb -->
     <div class="breadcrumb">
         <div class="container">
             <a href="index.html">الرئيسية</a>
