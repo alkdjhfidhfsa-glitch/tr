@@ -88,50 +88,22 @@ def update_html_file(file_path):
 
 def main():
     """الدالة الرئيسية"""
-    # قائمة الصفحات المراد تحديثها (باستثناء index.html)
-    html_files = [
-        'car-shades.html',
-        'garden-shades.html',
-        'pool-shades.html',
-        'school-shades.html',
-        'pvc-shades.html',
-        'wooden-fences.html',
-        'iron-fences.html',
-        'fabric-fences.html',
-        'hair-houses.html',
-        'hangars.html',
-        'tiles.html',
-        'cladding.html',
-        'cantilever-shades.html',
-        'pyramid-shades.html',
-        'polyethylene-shades.html',
-        'wooden-shades.html',
-        'tensile-structures.html',
-        'market-shades.html',
-        'mosque-shades.html',
-        'hanging-shades.html',
-        'conical-shades.html',
-        'school-fences.html',
-        'nets.html',
-        'shades.html',
-        'fences.html',
-        'gallery.html',
-        'latest-works.html'
-    ]
-    
+    # فحص جميع ملفات HTML في مجلد المشروع (الجذر فقط)
+    html_files = [f for f in os.listdir('.') if f.lower().endswith('.html')]
+
     updated_count = 0
     total_count = 0
-    
+
     for file_name in html_files:
-        if os.path.exists(file_name):
+        if os.path.isfile(file_name):
             total_count += 1
             if update_html_file(file_name):
                 updated_count += 1
         else:
             print(f"⚠️ الملف غير موجود: {file_name}")
-    
+
     print(f"\n🎉 تم تحديث {updated_count} من أصل {total_count} ملف")
-    print("✅ جميع الصفحات تحتوي الآن على تأثيرات أيقونات التواصل الاجتماعي!")
+    print("✅ تم توحيد القائمة الجانبية (Mobile Drawer) وربط CSS لجميع الصفحات في الجذر.")
 
 if __name__ == "__main__":
     main()
