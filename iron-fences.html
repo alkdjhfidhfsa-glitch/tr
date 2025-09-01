@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سواتر حديد - مؤسسة الدعجاني</title>
+    <meta name="description" content="سواتر حديد في الرياض كـ سواتر شرائح و سواتر مجدول وباسعار مناسبة و رائعة">
+    <meta name="keywords" content="سواتر حديد, سواتر شرائح, سواتر مجدول, سواتر الرياض, الدعجاني">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/hover-fix.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <p>جاري التحميل...</p>
+        </div>
+    </div>
+
+    <!-- Floating Social Media Icons -->
+    <div class="floating-social">
+        <div class="social-toggle" id="socialToggle">
+            <i class="fas fa-share-alt"></i>
+        </div>
+        <div class="social-icons" id="socialIcons">
+            <a href="https://www.facebook.com/Eldaagany/" target="_blank" class="social-icon facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/mzlathesa/" target="_blank" class="social-icon instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://twitter.com/eldaagany1" target="_blank" class="social-icon twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.youtube.com/channel/UChwNEDE6YiQ67qn0huD1Dnw" target="_blank" class="social-icon youtube">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://plus.google.com/u/0/111345076552861949683" target="_blank" class="social-icon google">
+                <i class="fab fa-google-plus-g"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Floating Contact Buttons -->
+    <div class="floating-contact">
+        <a href="tel:0504150690" class="contact-btn phone-btn">
+            <i class="fas fa-phone"></i>
+            <span>0504150690</span>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=+966504150690&text=أريد الاستفسار عن سواتر حديد" 
+           target="_blank" class="contact-btn whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+            <span>واتساب</span>
+        </a>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-main">
+                <div class="logo">
+                    <img src="images/logo.png" alt="مؤسسة حصة بادي الدعجاني للمظلات والسواتر">
+                    <div class="logo-text">
+                        <h1>مؤسسة حصة بادي الدعجاني للمظلات والسواتر</h1>
+                        <p>لجميع انواع المظلات و السواتر في الرياض</p>
+                    </div>
+                </div>
+                
+                <nav class="main-nav">
+                    <div class="nav-toggle" id="navToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link">المظلات <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="shades.html">مظلات</a></li>
+                                <li><a href="car-shades.html">مظلات السيارات</a></li>
+                                <li><a href="cantilever-shades.html">مظلات كابولي</a></li>
+                                <li><a href="pool-shades.html">مظلات مسابح</a></li>
+                                <li><a href="pvc-shades.html">مظلات بي في سي</a></li>
+                                <li><a href="garden-shades.html">مظلات حدائق</a></li>
+                                <li><a href="pyramid-shades.html">مظلات هرمية</a></li>
+                                <li><a href="polyethylene-shades.html">مظلات بولي ايثيلين</a></li>
+                                <li><a href="school-shades.html">مظلات مدارس</a></li>
+                                <li><a href="wooden-shades.html">مظلات خشبية</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link">السواتر <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="wooden-fences.html">السواتر الخشبية</a></li>
+                                <li><a href="school-fences.html">سواتر مدارس</a></li>
+                                <li><a href="iron-fences.html">سواتر حديد</a></li>
+                                <li><a href="fabric-fences.html">سواتر قماش</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link">خدمات أخرى <i class="fas fa-chevron-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-submenu">
+                                    <a href="#" class="nav-link">مظلات الشد الانشائي <i class="fas fa-chevron-down"></i></a>
+                                    <ul class="dropdown-submenu-menu">
+                                        <li><a href="tensile-structures.html">مظلات الشد الانشائي</a></li>
+                                        <li><a href="market-shades.html">مظلات الأسواق</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a href="#" class="nav-link">مظلات وسواتر متنوعة <i class="fas fa-chevron-down"></i></a>
+                                    <ul class="dropdown-submenu-menu">
+                                        <li><a href="mosque-shades.html">مظلات مساجد</a></li>
+                                        <li><a href="hanging-shades.html">المظلات المعلقة</a></li>
+                                        <li><a href="conical-shades.html">مظلات مخروطي</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="tiles.html">القرميد</a></li>
+                                <li><a href="cladding.html">الكلادينج</a></li>
+                                <li><a href="hair-houses.html">بيوت الشعر</a></li>
+                                <li><a href="nets.html">شبوك</a></li>
+                                <li><a href="hangars.html">هناجر</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="gallery.html" class="nav-link">معرض الصور</a></li>
+                        <li><a href="latest-works.html" class="nav-link">آخر أعمالنا</a></li>
+                        <li><a href="index.html" class="nav-link">اتصل بنا</a></li>
+                        <li><a href="index.html" class="nav-link">من نحن</a></li>
+                        <li><a href="index.html" class="nav-link btn-quote">أطلب عمل</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero iron-fences-hero">
+                <div class="hero-slider">
+                    <div class="slide active" style="background-image: url('images/IMG-20161120-WA0044-iron-fences.jpg')">
+                        <div class="slide-content">
+                            <h2>سواتر حديد عالية الجودة</h2>
+                            <p>حديد سابك متين ومقاوم للعوامل الجوية</p>
+                            <a href="#service-content" class="btn btn-primary">اطلع على المزيد</a>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image: url('images/DETV9987.jpg')">
+                        <div class="slide-content">
+                            <h2>سواتر حديد الرياض</h2>
+                            <p>تصاميم متطورة بأعلى معايير الجودة</p>
+                            <a href="#service-content" class="btn btn-primary">اطلع على المزيد</a>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image: url('images/DURF9019.jpg')">
+                        <div class="slide-content">
+                            <h2>سواتر الرياض شرائح</h2>
+                            <p>تصاميم شرائح عصرية وأنيقة</p>
+                            <a href="#service-content" class="btn btn-primary">اطلع على المزيد</a>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image: url('images/GYOJ8227.jpg')">
+                        <div class="slide-content">
+                            <h2>سواتر شرائح حديد الرياض</h2>
+                            <p>حلول متقدمة للحماية والخصوصية</p>
+                            <a href="#service-content" class="btn btn-primary">اطلع على المزيد</a>
+                        </div>
+                    </div>
+                    <div class="slide" style="background-image: url('images/KQSC0203.jpg')">
+                        <div class="slide-content">
+                            <h2>سواتر شرائح حديد 2020</h2>
+                            <p>أحدث التصاميم والتقنيات المتطورة</p>
+                            <a href="#service-content" class="btn btn-primary">اطلع على المزيد</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-controls">
+                    <button class="prev-slide"><i class="fas fa-chevron-right"></i></button>
+                    <button class="next-slide"><i class="fas fa-chevron-left"></i></button>
+                </div>
+
+                <div class="hero-indicators">
+                    <span class="indicator active" data-slide="0"></span>
+                    <span class="indicator" data-slide="1"></span>
+                    <span class="indicator" data-slide="2"></span>
+                    <span class="indicator" data-slide="3"></span>
+                    <span class="indicator" data-slide="4"></span>
+                </div>
+            </section>
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1>سواتر حديد</h1>
+                <p>سواتر حديد في الرياض كـ سواتر شرائح و سواتر مجدول وباسعار مناسبة و رائعة</p>
+            </div>
+
+            <!-- Service Content -->
+            <div id="service-content" class="service-content">
+                <div class="service-description">
+                    <h2>سواتر حديد</h2>
+                    <p><strong>مظلات وسواتر</strong> الدعجاني تقدم لكم اسعار السواتر بانواعها المختلفة <strong>سواتر حديد</strong> – <strong>سواتر خشبية</strong> – <strong>سواتر قماش</strong> – <strong>سواتر ومظلات</strong> – <strong>سواتر بلاستيك</strong> صور وتفاصيل عن سعر المتر المربع للسواتر و <strong>مظلات السيارات</strong> باسعار هي الأفضل بمدينة الرياض وكافة مدن المملكة.</p>
+                    
+                    <p>مؤسسة الدعجاني لتركيب ال<strong>سواتر</strong> باسعار مدهشة ورائعة.</p>
+                </div>
+
+                <div class="pricing-section">
+                    <h3>أسعار السواتر</h3>
+                    <div class="pricing-table">
+                        <div class="price-item">
+                            <h4>130 ريال</h4>
+                            <p>حديد مجدول</p>
+                        </div>
+                        <div class="price-item">
+                            <h4>140 ريال</h4>
+                            <p>حديد شرائح</p>
+                        </div>
+                        <div class="price-item">
+                            <h4>120 ريال</h4>
+                            <p>سواتر قماش</p>
+                        </div>
+                        <div class="price-item">
+                            <h4>210 ريال</h4>
+                            <p>مجدول خشبي</p>
+                        </div>
+                        <div class="price-item">
+                            <h4>230 ريال</h4>
+                            <p>شرائح خشبي</p>
+                        </div>
+                        <div class="price-item">
+                            <h4>70 ريال</h4>
+                            <p>شينكو</p>
+                        </div>
+                    </div>
+                    <p class="pricing-note">الاسعار اعلاه للمتر المربع تواصل معنا وتس اب وان شاء الله نسوي لك خصم طيب على تركيب سواتر الجدران بعد معرفة المساحة المواهله للتركيب وراح نزودك بالصوره المناسبة لكل نوع وتس اب <strong>0504150690</strong>.</p>
+                </div>
+
+                <div class="detailed-description">
+                    <p>ويتم <strong>تركيب سواتر</strong> حديد باسعار رخيصه ومقارنه بالـ <strong>سواتر خشبية</strong> ، وميزة السواتر الحديدية لدى مؤسسة الدعجاني بانها متميزة بعدة خصائص بكلفة بسيطة وبضمان وحماية – ومعالجة بنوعية دهانات خاصه للمساعدة على مقاومة الرطوبة والامطار من الصدى بحيث تكون الـ <strong>سواتر</strong> بعمر افتراضي طويل بمشيئة الله تعالى .</p>
+
+                    <p>وتنقسم السواتر الحديد الى نوعين <strong>سواتر حديد</strong> ( <strong>شرائح</strong> ، <strong>مجدول</strong>) وبمواصفات عالية من ناحية سماكات الحديد وطرق التثبيت فينه تعطي شكل جمالي ونوعية الدهانات واسعارنا مناسبه وفي متناول الجميع للمجدول والشرائح.</p>
+
+                    <p>وهذا يعتبر تحديث لاخر الاعمال في تركيب سواتر حديد.</p>
+                </div>
+
+                <div class="fence-types">
+                    <h3>أنواع السواتر الحديدية</h3>
+                    <div class="types-grid">
+                        <div class="type-item">
+                            <i class="fas fa-th-large"></i>
+                            <h4>سواتر حديد شرائح</h4>
+                            <div class="type-features">
+                                <p><strong>سواتر شرائح حديدية عالية الجودة</strong></p>
+                                <ul>
+                                    <li>140 ريال للمتر المربع</li>
+                                    <li>حجب كامل للرؤية</li>
+                                    <li>مقاومة للصدأ والعوامل الجوية</li>
+                                    <li>دهانات خاصة عالية الجودة</li>
+                                    <li>تصاميم عصرية وجمالية</li>
+                                    <li>متوفرة بألوان متعددة</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="type-item">
+                            <i class="fas fa-th"></i>
+                            <h4>سواتر حديد مجدول</h4>
+                            <div class="type-features">
+                                <p><strong>سواتر مجدولة قوية ومتينة</strong></p>
+                                <ul>
+                                    <li>130 ريال للمتر المربع</li>
+                                    <li>تسمح بمرور الهواء</li>
+                                    <li>توفر الأمان والحماية</li>
+                                    <li>سماكات حديد عالية</li>
+                                    <li>طرق تثبيت متطورة</li>
+                                    <li>عمر افتراضي طويل</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="service-features">
+                    <h3>مميزات السواتر الحديدية</h3>
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <h4>قوة ومتانة</h4>
+                            <p>مصنوعة من أفضل أنواع الحديد السعودي (حديد سابك)</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <h4>دهانات خاصة</h4>
+                            <p>معالجة بدهانات خاصة لمقاومة الرطوبة والأمطار</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-tools"></i>
+                            <h4>تركيب متطور</h4>
+                            <p>طرق تثبيت مبتكرة وآمنة على السور مباشرة</p>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-palette"></i>
+                            <h4>ألوان متنوعة</h4>
+                            <p>ألوان مطبقة بالكمبيوتر لتناسب لون الجدار</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-intro">
+                    <h3>معرض صور السواتر الحديدية</h3>
+                    <p>اطلع على مجموعة من أعمالنا المميزة في تركيب السواتر الحديدية</p>
+                </div>
+
+                <div class="service-gallery">
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="images/DETV9987.jpg" alt="سواتر حديد الرياض">
+                            <div class="gallery-overlay">
+                                <h4>سواتر حديد الرياض</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/DURF9019.jpg" alt="سواتر الرياض شرائح">
+                            <div class="gallery-overlay">
+                                <h4>سواتر الرياض شرائح</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/GYOJ8227.jpg" alt="سواتر شرائح حديد الرياض">
+                            <div class="gallery-overlay">
+                                <h4>سواتر شرائح حديد الرياض</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/KQSC0203.jpg" alt="سواتر شرائح حديد 2020">
+                            <div class="gallery-overlay">
+                                <h4>سواتر شرائح حديد 2020</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/OJZR9969.jpg" alt="سواتر حديد شرائح 2020">
+                            <div class="gallery-overlay">
+                                <h4>سواتر حديد شرائح 2020</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/RKDC6791.jpg" alt="سواتر شرائح من الخارج">
+                            <div class="gallery-overlay">
+                                <h4>سواتر شرائح من الخارج</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/VHYU1131.jpg" alt="سواتر لون بني حديد">
+                            <div class="gallery-overlay">
+                                <h4>سواتر لون بني حديد</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/XBGU3785.jpg" alt="سواتر حديد شرائح">
+                            <div class="gallery-overlay">
+                                <h4>سواتر حديد شرائح</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/AZWA2946.jpg" alt="سواتر حديد 2020">
+                            <div class="gallery-overlay">
+                                <h4>سواتر حديد 2020</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/DJYG0876.jpg" alt="سواتر حديد مجدول">
+                            <div class="gallery-overlay">
+                                <h4>سواتر حديد مجدول</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/EVKB6002.jpg" alt="سواتر مجدول حديد 2020">
+                            <div class="gallery-overlay">
+                                <h4>سواتر مجدول حديد 2020</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/IQUZ5824.jpg" alt="سواتر مجدول حديد قيد التنفيذ">
+                            <div class="gallery-overlay">
+                                <h4>سواتر مجدول حديد قيد التنفيذ</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/LAMG9297.jpg" alt="سواتر مجدول بعد التنفيذ">
+                            <div class="gallery-overlay">
+                                <h4>سواتر مجدول بعد التنفيذ</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/ELPC8528.jpg" alt="سواتر حديد لاسوار المنزل">
+                            <div class="gallery-overlay">
+                                <h4>سواتر حديد لاسوار المنزل</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/FUVS5905.jpg" alt="مظلات اسوار المنزل حديد">
+                            <div class="gallery-overlay">
+                                <h4>مظلات اسوار المنزل حديد</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/WPBQ4739.jpg" alt="سواتر حديد لاسوار الفلل">
+                            <div class="gallery-overlay">
+                                <h4>سواتر حديد لاسوار الفلل</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/MHCK9141.jpg" alt="سواتر مجدول لون بيج">
+                            <div class="gallery-overlay">
+                                <h4>سواتر مجدول لون بيج</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/QENW7346.jpg" alt="سواتر مجدول 2020">
+                            <div class="gallery-overlay">
+                                <h4>سواتر مجدول 2020</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/UYRS7410.jpg" alt="حديد مجدول">
+                            <div class="gallery-overlay">
+                                <h4>حديد مجدول</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/VISF2845.jpg" alt="سواتر حديد مجدول اثناء التركيب">
+                            <div class="gallery-overlay">
+                                <h4>سواتر حديد مجدول اثناء التركيب</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/IMG-20191218-WA0130.jpg" alt="سواتر حديد لون ابيض">
+                            <div class="gallery-overlay">
+                                <h4>سواتر حديد لون ابيض</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/IMG-20191218-WA0131.jpg" alt="تركيب سواتر حديد شكل تصميم جديد">
+                            <div class="gallery-overlay">
+                                <h4>تركيب سواتر حديد شكل تصميم جديد</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/IMG-20191218-WA0132.jpg" alt="تركيب سواتر حديد لون بيج">
+                            <div class="gallery-overlay">
+                                <h4>تركيب سواتر حديد لون بيج</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/IMG-20191218-WA0133.jpg" alt="سواتر مدارس سواتر حديد">
+                            <div class="gallery-overlay">
+                                <h4>سواتر مدارس سواتر حديد</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/IMG-20191218-WA0134.jpg" alt="سواتر حديد لاسطح المنازل">
+                            <div class="gallery-overlay">
+                                <h4>سواتر حديد لاسطح المنازل</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/IMG-20191218-WA0135.jpg" alt="سواتر فلل سواتر حديد">
+                            <div class="gallery-overlay">
+                                <h4>سواتر فلل سواتر حديد</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/IMG-20191218-WA0136.jpg" alt="تركيب سواتر حديد بزوايا بدون فراغات">
+                            <div class="gallery-overlay">
+                                <h4>تركيب سواتر حديد بزوايا بدون فراغات</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/IMG-20191218-WA0137.jpg" alt="سواتر حديد شرائح تصميم داخلي">
+                            <div class="gallery-overlay">
+                                <h4>سواتر حديد شرائح تصميم داخلي</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/IMG-20191218-WA0138.jpg" alt="سواتر حديد بعد التنفيذ">
+                            <div class="gallery-overlay">
+                                <h4>سواتر حديد بعد التنفيذ</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/IMG-20191218-WA0140.jpg" alt="تركيب سواتر حديد مرتفعة الطول">
+                            <div class="gallery-overlay">
+                                <h4>تركيب سواتر حديد مرتفعة الطول</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/IMG-20191218-WA0141.jpg" alt="سواتر لون ابيض سواتر حديد">
+                            <div class="gallery-overlay">
+                                <h4>سواتر لون ابيض سواتر حديد</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/IMG-20191218-WA0142.jpg" alt="سواتر اسطح منازل سواتر حديد">
+                            <div class="gallery-overlay">
+                                <h4>سواتر اسطح منازل سواتر حديد</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/mzlat-hesa-iron-screens-tabular-1.jpg" alt="سواتر حديد للمدارس">
+                            <div class="gallery-overlay">
+                                <h4>سواتر حديد للمدارس</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/mzlat-hesa-iron-screens-tabular-2.jpg" alt="سواتر حديد للفلل">
+                            <div class="gallery-overlay">
+                                <h4>سواتر حديد للفلل</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/mzlat-hesa-iron-slices-1.jpg" alt="سواتر شرائح للمنازل">
+                            <div class="gallery-overlay">
+                                <h4>سواتر شرائح للمنازل</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/mzlat-hesa-iron-slices-2.jpg" alt="سواتر حديد للفلل">
+                            <div class="gallery-overlay">
+                                <h4>سواتر حديد للفلل</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/mzlat-hesa-iron-slices-3.jpg" alt="سواتر حديد شرائح رائعة">
+                            <div class="gallery-overlay">
+                                <h4>سواتر حديد شرائح رائعة</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/mzlat-hesa-iron-slices-4.jpg" alt="سواتر حديد للمؤسسات">
+                            <div class="gallery-overlay">
+                                <h4>سواتر حديد للمؤسسات</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/mzlat-hesa-iron-slices-5.jpg" alt="سواتر حديد شرائح بالالوان مختلفة">
+                            <div class="gallery-overlay">
+                                <h4>سواتر حديد شرائح بالالوان مختلفة</h4>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="images/mzlat-hesa-iron-slices-6.jpg" alt="سواتر حديد شرائح">
+                            <div class="gallery-overlay">
+                                <h4>سواتر حديد شرائح</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="additional-info">
+                    <h3>خدماتنا في السواتر الحديدية</h3>
+                    <p>ومن خلال أفضل انواع الصناعات السعوديه (حديد سابك) لاسوار المنازل والفلل والقصور وغيرها وبعدة سمكات مختلفة على حسب ارتفاع الساتر ودرجة عامل الامان والشكل وباسعار هي الانسب والاوفر في جميع انواع السواتر بالمملكة العربية السعودية ومؤسستنا تسخر وتقدم فريق تركيب متخصص لانهاء العمل في وقت قياسي ليرضي العميل من خلال تكثيف الجهد لبناء السواتر حسب اصول الصناعة وبنفس السعر المعتاد للمؤسسة منذ فترة طويله مع مراعات إختلاف المساحات او إماكن العمل خارج الرياض ويتم تحديد والنظر فيها بجدول زمني محدد للتركيب ويتم اطلاع العميل بكل خطوة سيتم تنفيدها قبل الاتفاق ليكون التفاهم اساس النجاح بين الطرفين.</p>
+
+                    <div class="key-points">
+                        <ul>
+                            <li><strong>تحتل المرتبه الاولى للإسعار بما يؤهلها في السوق من ناحية الشكل والمضمون.</strong></li>
+                            <li><strong>يتم استخدم طرق مبتكرة آمنة لتثبيت السواتر على السور مباشرة بدون أعمدة من الارض.</strong></li>
+                            <li><strong>تركيب السواتر بالوان تم تطبيقها في الكمبيوتر لادراج لون يكون نفس لون الجدار او اي لون يختاره العميل.</strong></li>
+                        </ul>
+                    </div>
+
+                    <p><strong>سواتر ومظلات</strong> مؤسسة الدعجاني ترحب بعملائهم الكرام لـ <strong>تركيب سواتر</strong> في منازلكم بسعر طيب ووقت سريع جداً وبسماكات حديد عاليه ومختلفة ويشملها ضمان شامل من المؤسسة، وخبرتنا الطويل في هذا المجال (سواتر الحديد) تجعلنا محل ثقتكم ان شاء الله.</p>
+                </div>
+
+                <div class="contact-section">
+                    <h3>للطلب والاستفسار</h3>
+                    <p>ج/0504150690 ج/0545001980</p>
+                    <div class="contact-buttons">
+                        <a href="tel:0504150690" class="btn btn-primary">
+                            <i class="fas fa-phone"></i>
+                            0504150690
+                        </a>
+                        <a href="tel:0545001980" class="btn btn-secondary">
+                            <i class="fas fa-phone"></i>
+                            0545001980
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=+966504150690&text=أريد الاستفسار عن سواتر حديد" class="btn btn-success">
+                            <i class="fab fa-whatsapp"></i>
+                            واتساب
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo.png" alt="مؤسسة حصة بادي الدعجاني للمظلات والسواتر">
+                        <h3>مؤسسة حصة بادي الدعجاني للمظلات والسواتر</h3>
+                        <p>إحدى المؤسسات الرائدة في مجال أعمال المظلات والسواتر والهناجر والمستودعات وجميع الأعمال الحديدية</p>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>المظلات</h4>
+                    <ul>
+                        <li><a href="shades.html">مظلات</a></li>
+                        <li><a href="car-shades.html">مظلات السيارات</a></li>
+                        <li><a href="cantilever-shades.html">مظلات كابولي</a></li>
+                        <li><a href="pool-shades.html">مظلات مسابح</a></li>
+                        <li><a href="pvc-shades.html">مظلات بي في سي</a></li>
+                        <li><a href="garden-shades.html">مظلات حدائق</a></li>
+                        <li><a href="pyramid-shades.html">مظلات هرمية</a></li>
+                        <li><a href="polyethylene-shades.html">مظلات بولي ايثيلين</a></li>
+                        <li><a href="school-shades.html">مظلات مدارس</a></li>
+                        <li><a href="wooden-shades.html">مظلات خشبية</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>السواتر</h4>
+                    <ul>
+                        <li><a href="fences.html">سواتر</a></li>
+                        <li><a href="wooden-fences.html">السواتر الخشبية</a></li>
+                        <li><a href="school-fences.html">سواتر مدارس</a></li>
+                        <li><a href="iron-fences.html">سواتر حديد</a></li>
+                        <li><a href="fabric-fences.html">سواتر قماش</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>خدمات أخرى</h4>
+                    <ul>
+                        <li><a href="tensile-structures.html">مظلات الشد الانشائي</a></li>
+                        <li><a href="market-shades.html">مظلات الأسواق</a></li>
+                        <li><a href="mosque-shades.html">مظلات مساجد</a></li>
+                        <li><a href="hanging-shades.html">المظلات المعلقة</a></li>
+                        <li><a href="conical-shades.html">مظلات مخروطي</a></li>
+                        <li><a href="tiles.html">القرميد</a></li>
+                        <li><a href="cladding.html">الكلادينج</a></li>
+                        <li><a href="hair-houses.html">بيوت الشعر</a></li>
+                        <li><a href="nets.html">شبوك</a></li>
+                        <li><a href="hangars.html">هناجر</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="index.html#about">من نحن</a></li>
+                        <li><a href="gallery.html">معرض الصور</a></li>
+                        <li><a href="latest-works.html">آخر أعمالنا</a></li>
+                        <li><a href="index.html#contact">اتصل بنا</a></li>
+                        <li><a href="index.html#request-quote">أطلب عمل</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>تواصل معنا</h4>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> 0504150690</p>
+                        <p><i class="fas fa-phone"></i> 0545001980</p>
+                        <p><i class="fas fa-envelope"></i> sales@mzlat-hesa.com</p>
+                        <p><i class="fas fa-envelope"></i> sameal.al@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> الرياض – الصناعية القديمة – شارع 24</p>
+                    </div>
+
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/Eldaagany/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/mzlathesa/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/eldaagany1" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/channel/UChwNEDE6YiQ67qn0huD1Dnw" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 - جميع الحقوق محفوظة لمؤسسة حصة بادي الدعجاني للمظلات والسواتر</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/hover-fix.js"></script>
+
+    <!-- Hero Slider Auto-play Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto-play hero slider every 5 seconds
+            setInterval(function() {
+                const nextBtn = document.querySelector('.next-slide');
+                if (nextBtn) {
+                    nextBtn.click();
+                }
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

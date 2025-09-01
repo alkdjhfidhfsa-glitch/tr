@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Runner - MRW Tests</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .test-suite {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .test-suite-header {
+            background: #007acc;
+            color: white;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .test-case {
+            padding: 10px 15px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .test-case:last-child {
+            border-bottom: none;
+        }
+        .test-name {
+            flex: 1;
+        }
+        .test-status {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .test-status.pass {
+            background: #d4edda;
+            color: #155724;
+        }
+        .test-status.fail {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .test-status.skip {
+            background: #fff3cd;
+            color: #856404;
+        }
+        .summary {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        .summary-stats {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .stat-label {
+            font-size: 12px;
+            color: #666;
+        }
+        .error-details {
+            background: #f8d7da;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            font-size: 12px;
+            color: #721c24;
+        }
+        .run-button {
+            background: #007acc;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        .run-button:hover {
+            background: #005a9e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>MRW Website Test Suite</h1>
+        <button class="run-button" onclick="runAllTests()">Run All Tests</button>
+        
+        <div class="summary">
+            <div class="summary-stats">
+                <div class="stat">
+                    <div class="stat-number" id="total-tests">0</div>
+                    <div class="stat-label">Total Tests</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="passed-tests">0</div>
+                    <div class="stat-label">Passed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="failed-tests">0</div>
+                    <div class="stat-label">Failed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="skipped-tests">0</div>
+                    <div class="stat-label">Skipped</div>
+                </div>
+            </div>
+        </div>
+
+        <div id="test-results"></div>
+    </div>
+
+    <!-- Test Framework -->
+    <script src="test-framework.js"></script>
+    
+    <!-- Source Files to Test -->
+    <script src="../js/main.js"></script>
+    <script src="../js/rating-system.js"></script>
+    <script src="../js/animations.js"></script>
+    <script src="../js/hover-fix.js"></script>
+    <script src="../js/script.js"></script>
+    
+    <!-- Test Files -->
+    <script src="main.test.js"></script>
+    <script src="rating-system.test.js"></script>
+    <script src="animations.test.js"></script>
+    <script src="hover-fix.test.js"></script>
+    <script src="script.test.js"></script>
+    <script src="utils.test.js"></script>
+    
+    <!-- Test Runner -->
+    <script src="test-runner.js"></script>
+</body>
+</html>

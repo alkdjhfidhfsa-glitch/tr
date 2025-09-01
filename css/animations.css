@@ -1,0 +1,1248 @@
+/* ===== مؤثرات بصرية وعداد متحرك لقسم من نحن ===== */
+
+/* مؤثرات الظهور التدريجي */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* مؤثر التكبير */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* مؤثر الدوران */
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-180deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+/* مؤثر النبضة */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* مؤثر التوهج */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(74, 144, 226, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(74, 144, 226, 0.6);
+    }
+}
+
+/* مؤثر الموجة */
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* مؤثر الاهتزاز */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+/* حركة الأيقونات الجميلة */
+@keyframes iconBounce {
+    0%, 100% {
+        transform: translateY(0px) scale(1);
+    }
+    25% {
+        transform: translateY(-8px) scale(1.05);
+    }
+    50% {
+        transform: translateY(-4px) scale(1.02);
+    }
+    75% {
+        transform: translateY(-2px) scale(1.01);
+    }
+}
+
+@keyframes iconRotate {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    25% {
+        transform: rotate(5deg) scale(1.1);
+    }
+    50% {
+        transform: rotate(0deg) scale(1.05);
+    }
+    75% {
+        transform: rotate(-5deg) scale(1.1);
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+@keyframes iconGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(74, 144, 226, 0.3);
+        transform: scale(1);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(74, 144, 226, 0.6), 0 0 40px rgba(74, 144, 226, 0.4);
+        transform: scale(1.05);
+    }
+}
+
+/* مؤثر التدرج اللوني */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* تحسين قسم من نحن */
+#about {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23000" opacity="0.02"/><circle cx="75" cy="75" r="1" fill="%23000" opacity="0.02"/><circle cx="50" cy="10" r="1" fill="%23000" opacity="0.02"/><circle cx="10" cy="50" r="1" fill="%23000" opacity="0.02"/><circle cx="90" cy="30" r="1" fill="%23000" opacity="0.02"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    pointer-events: none;
+}
+
+/* تحسين العنوان الرئيسي */
+#about .section-header h2 {
+    position: relative;
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 700;
+    background: linear-gradient(45deg, #4a90e2, #357abd, #2c5aa0);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite;
+}
+
+#about .section-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(45deg, #4a90e2, #357abd);
+    border-radius: 2px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* تحسين الإحصائيات */
+.about-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.stat-item {
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 15px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(74, 144, 226, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.stat-item:hover::before {
+    left: 100%;
+}
+
+.stat-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(74, 144, 226, 0.2);
+    animation: glow 2s ease-in-out infinite;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #4a90e2;
+    margin-bottom: 0.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+/* مؤثرات الظهور للعناصر */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-fade-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease;
+}
+
+.animate-fade-left.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-fade-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s ease;
+}
+
+.animate-fade-right.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-zoom-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s ease;
+}
+
+.animate-zoom-in.animated {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* تحسين النصوص */
+.about-text h3 {
+    color: #2c5aa0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 2rem 0 1rem 0;
+    position: relative;
+    padding-right: 1rem;
+}
+
+.about-text h3::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(45deg, #4a90e2, #357abd);
+    border-radius: 2px;
+}
+
+.about-text p {
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* تحسين بطاقات الخدمات */
+.services-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+    gap: 2rem !important;
+    margin-top: 2rem !important;
+    width: 100% !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.service-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(45deg, #4a90e2, #357abd);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(74, 144, 226, 0.15);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: #4a90e2;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.service-card:hover i {
+    animation: wave 1s ease-in-out infinite;
+}
+
+.service-card h4 {
+    color: #2c5aa0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* ===== مؤثرات الصور المتحركة ===== */
+.about-images-section {
+    position: relative;
+    height: 300px;
+    margin: 2rem 0;
+    overflow: hidden;
+}
+
+.floating-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.floating-image {
+    position: absolute;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.floating-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.floating-image:hover img {
+    transform: scale(1.1);
+}
+
+.floating-image-1 {
+    width: 200px;
+    height: 150px;
+    top: 20px;
+    left: 10%;
+    z-index: 3;
+}
+
+.floating-image-2 {
+    width: 180px;
+    height: 120px;
+    top: 80px;
+    right: 15%;
+    z-index: 2;
+}
+
+.floating-image-3 {
+    width: 160px;
+    height: 100px;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.animate-float-slow {
+    animation: float 8s ease-in-out infinite;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* ===== تحسين الإحصائيات مع الأيقونات ===== */
+.stat-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-icon {
+    font-size: 2rem;
+    color: #4a90e2;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover .stat-icon {
+    transform: scale(1.2) rotate(10deg);
+    color: #357abd;
+}
+
+.stat-description {
+    font-size: 0.9rem;
+    color: #888;
+    margin-top: 0.5rem;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover .stat-description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== تحسين بطاقات المعلومات ===== */
+.about-info-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    margin: 3rem 0;
+}
+
+.about-text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.about-text-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.about-text-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(45deg, #4a90e2, #357abd);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.about-text-card:hover::before {
+    transform: scaleX(1);
+}
+
+.about-text-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(74, 144, 226, 0.15);
+}
+
+.card-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #4a90e2, #357abd);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+}
+
+.card-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.about-text-card:hover .card-icon {
+    transform: scale(1.1) rotate(10deg);
+}
+
+.card-title {
+    color: #2c5aa0;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.card-description {
+    color: #666;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.card-decoration {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(74, 144, 226, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(50%, 50%);
+}
+
+/* ===== قسم المميزات ===== */
+.about-features-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.feature-item {
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-item::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover::before {
+    transform: scale(1);
+}
+
+.feature-item:hover {
+    transform: scale(1.05);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-item h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== تحسين قسم الخدمات ===== */
+.services-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.services-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c5aa0;
+    margin-bottom: 1rem;
+}
+
+.services-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.services-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.decoration-line {
+    width: 50px;
+    height: 2px;
+    background: linear-gradient(45deg, #4a90e2, #357abd);
+}
+
+.decoration-circle {
+    width: 12px;
+    height: 12px;
+    background: #4a90e2;
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* ===== بطاقات الخدمات المتقدمة ===== */
+.premium-card {
+    position: relative;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    border: 1px solid rgba(74, 144, 226, 0.1);
+}
+
+.card-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(74, 144, 226, 0.05) 0%, rgba(53, 122, 189, 0.05) 100%);
+    opacity: 0 !important;
+    transition: none !important;
+    display: none !important;
+}
+
+.premium-card:hover .card-background {
+    opacity: 0 !important;
+}
+
+.service-icon-wrapper {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(45deg, #4a90e2, #357abd);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    animation: iconBounce 3s ease-in-out infinite;
+}
+
+.service-icon-wrapper i {
+    font-size: 2rem;
+    color: white;
+    z-index: 2;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* حركة مختلفة لكل أيقونة */
+.premium-card:nth-child(1) .service-icon-wrapper {
+    animation: iconBounce 3s ease-in-out infinite;
+    animation-delay: 0s;
+}
+
+.premium-card:nth-child(2) .service-icon-wrapper {
+    animation: iconRotate 4s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.premium-card:nth-child(3) .service-icon-wrapper {
+    animation: iconGlow 3.5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.premium-card:nth-child(4) .service-icon-wrapper {
+    animation: iconBounce 3.2s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+.premium-card:nth-child(5) .service-icon-wrapper {
+    animation: iconRotate 3.8s ease-in-out infinite;
+    animation-delay: 2s;
+}
+
+.premium-card:nth-child(6) .service-icon-wrapper {
+    animation: iconGlow 4.2s ease-in-out infinite;
+    animation-delay: 2.5s;
+}
+
+.icon-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(74, 144, 226, 0.4) 0%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.premium-card:hover .icon-glow {
+    opacity: 1;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* تأثير hover للأيقونات */
+.premium-card:hover .service-icon-wrapper {
+    animation: iconRotate 0.6s ease-in-out !important;
+    background: linear-gradient(45deg, #ffd700, #ffed4e) !important;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.5) !important;
+}
+
+.premium-card:hover .service-icon-wrapper i {
+    color: #2c5aa0 !important;
+    transform: scale(1.2) !important;
+}
+
+.premium-card:hover .service-icon-wrapper {
+    transform: none !important;
+}
+
+/* إصلاح مشكلة اختفاء الأيقونات عند الـ hover */
+.premium-card:hover .service-icon-wrapper i {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+    z-index: 10;
+}
+
+.service-icon-wrapper i {
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.premium-card h4 {
+    color: #2c5aa0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+}
+
+.premium-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 999;
+}
+
+.service-link:hover {
+    color: #357abd;
+    transform: translateX(-5px);
+}
+
+.card-hover-effect {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+.premium-card:hover .card-hover-effect {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+.premium-card:hover {
+    transform: none !important;
+    box-shadow: 0 10px 25px rgba(74, 144, 226, 0.15) !important;
+}
+
+/* منع اختفاء العناصر عند الـ hover */
+.premium-card:hover *,
+.premium-card:hover .service-icon-wrapper,
+.premium-card:hover .service-icon-wrapper i,
+.premium-card:hover h4,
+.premium-card:hover p,
+.premium-card:hover .service-link {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    pointer-events: auto !important;
+    transform: none !important;
+}
+
+.premium-card:hover .service-link {
+    display: inline-flex !important;
+}
+
+/* حماية إضافية لجميع العناصر داخل البطاقة */
+.premium-card * {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* تأكيد عرض البطاقات */
+.premium-card {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* إزالة تأثير hover تماماً على الروابط */
+.premium-card .service-link {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    display: inline-flex !important;
+    position: relative !important;
+    z-index: 9999 !important;
+}
+
+.premium-card:hover .service-icon-wrapper,
+.premium-card:hover .service-icon-wrapper i,
+.premium-card:hover h4,
+.premium-card:hover p {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+/* حماية خاصة لروابط "اعرف المزيد" */
+.service-link {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-flex !important;
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: 9999 !important;
+}
+
+/* حماية شاملة للروابط من أي تأثير */
+.premium-card .service-link,
+.premium-card:hover .service-link,
+.premium-card:focus .service-link,
+.premium-card:active .service-link {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-flex !important;
+    pointer-events: auto !important;
+    position: relative !important;
+    z-index: 9999 !important;
+    transform: none !important;
+}
+
+.premium-card .service-link,
+.service-card .service-link {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-flex !important;
+    pointer-events: auto !important;
+}
+
+/* تأكيد عرض الأيقونات */
+.service-icon-wrapper {
+    overflow: visible !important;
+}
+
+.service-icon-wrapper i {
+    position: relative !important;
+    z-index: 100 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+}
+
+
+
+/* استجابة للشاشات الصغيرة */
+@media (max-width: 768px) {
+    #about .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .stat-item {
+        padding: 1.5rem 1rem;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .about-info-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-images-section {
+        height: 200px;
+    }
+
+    .floating-image-1,
+    .floating-image-2,
+    .floating-image-3 {
+        width: 120px;
+        height: 80px;
+    }
+
+    .services-title {
+        font-size: 2rem;
+    }
+}
+
+/* إصلاح شامل لعرض بطاقات الخدمات */
+.about-services {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.about-services .services-grid {
+    display: grid !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.about-services .premium-card {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: white !important;
+    border: 1px solid #e0e0e0 !important;
+}
+
+/* تأكيد عرض جميع عناصر البطاقة */
+.premium-card .service-icon-wrapper,
+.premium-card h4,
+.premium-card p,
+.premium-card .service-link {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.premium-card .service-link {
+    display: inline-flex !important;
+}
+
+/* تأكيد عرض الأيقونات */
+.service-icon-wrapper i {
+    font-size: 2rem !important;
+    color: white !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* إصلاح مشكلة الأيقونات المختفية */
+.fas {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+    display: inline-block !important;
+}
+
+/* منع اختفاء العناصر نهائياً عند الـ hover */
+.premium-card,
+.premium-card:hover,
+.premium-card:focus,
+.premium-card:active {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.premium-card *,
+.premium-card:hover *,
+.premium-card:focus *,
+.premium-card:active * {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}
+
+.premium-card .service-icon-wrapper,
+.premium-card:hover .service-icon-wrapper,
+.premium-card .service-icon-wrapper i,
+.premium-card:hover .service-icon-wrapper i {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+    transform: none !important;
+}
+
+.premium-card h4,
+.premium-card:hover h4,
+.premium-card p,
+.premium-card:hover p {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.premium-card .service-link,
+.premium-card:hover .service-link {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-flex !important;
+    pointer-events: auto !important;
+}
+
+/* إزالة جميع تأثيرات الـ hover التي تسبب الاختفاء */
+.premium-card:hover {
+    transform: none !important;
+    box-shadow: 0 10px 25px rgba(74, 144, 226, 0.15) !important;
+}
+
+.premium-card:hover .service-icon-wrapper {
+    transform: none !important;
+}
+
+.premium-card:hover .icon-glow {
+    opacity: 0 !important;
+    animation: none !important;
+}
+
+/* ضمان عرض جميع العناصر دائماً */
+.premium-card,
+.premium-card *,
+.premium-card:hover,
+.premium-card:hover * {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.premium-card .service-icon-wrapper,
+.premium-card .service-icon-wrapper i,
+.premium-card h4,
+.premium-card p,
+.premium-card .service-link {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+}
+
+.premium-card .service-icon-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.premium-card .service-icon-wrapper i {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.premium-card .service-link {
+    display: inline-flex !important;
+}
+
+/* CSS نهائي لمنع اختفاء البيانات */
+.premium-card:hover h4,
+.premium-card:hover p,
+.premium-card:hover .service-link,
+.premium-card:hover .service-icon-wrapper,
+.premium-card:hover .service-icon-wrapper i {
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: inherit !important;
+    background: inherit !important;
+}
+
+/* منع أي تأثير يخفي العناصر */
+.premium-card:hover::before,
+.premium-card:hover::after,
+.premium-card:hover .card-background,
+.premium-card:hover .card-hover-effect,
+.premium-card:hover .icon-glow {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+/* حماية قوية للأيقونات من الاختفاء */
+.premium-card .service-icon-wrapper i,
+.premium-card:hover .service-icon-wrapper i,
+.premium-card:focus .service-icon-wrapper i,
+.premium-card:active .service-icon-wrapper i {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+    color: white !important;
+    font-size: 2rem !important;
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+    align-items: center !important;
+    justify-content: center !important;
+    position: relative !important;
+    z-index: 999 !important;
+    transform: none !important;
+}
+
+/* منع اختفاء الأيقونات بأي طريقة */
+.fas,
+.fab,
+.far,
+.premium-card .fas,
+.premium-card:hover .fas {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
+}

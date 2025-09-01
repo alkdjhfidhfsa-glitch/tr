@@ -1,0 +1,281 @@
+/* خلفيات شفافة لأقسام اتصل بنا وأطلب عمل */
+
+/* قسم اتصل بنا - خلفية شفافة */
+#contact.contact-section {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+#contact.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(74, 144, 226, 0.1) 0%, 
+        rgba(80, 200, 120, 0.1) 50%, 
+        rgba(255, 193, 7, 0.1) 100%);
+    z-index: -1;
+}
+
+/* تحسين النصوص في قسم اتصل بنا */
+#contact .section-header h2 {
+    color: #2c3e50;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#contact .section-header p {
+    color: #5a6c7d;
+}
+
+/* بطاقات التواصل */
+#contact .contact-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#contact .contact-card:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* أيقونات التواصل - لون أبيض مع خلفية ملونة */
+#contact .contact-icon {
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    color: white !important;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    box-shadow: 0 4px 15px rgba(74, 144, 226, 0.3);
+    transition: all 0.3s ease;
+}
+
+#contact .contact-icon:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+#contact .contact-icon i {
+    color: white !important;
+    font-size: 24px;
+}
+
+/* قسم أطلب عمل - خلفية شفافة */
+#request-quote.service-section {
+    background: rgba(248, 249, 250, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+}
+
+#request-quote.service-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, 
+        rgba(52, 152, 219, 0.1) 0%, 
+        rgba(155, 89, 182, 0.1) 50%, 
+        rgba(231, 76, 60, 0.1) 100%);
+    z-index: -1;
+}
+
+/* تحسين النصوص في قسم أطلب عمل */
+#request-quote .section-header h2 {
+    color: #2c3e50;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#request-quote .section-header p {
+    color: #5a6c7d;
+}
+
+/* نموذج طلب العمل */
+#request-quote .quote-form {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#request-quote .quote-form:hover {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* حقول النموذج */
+#request-quote .form-group input,
+#request-quote .form-group select,
+#request-quote .form-group textarea {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+#request-quote .form-group input:focus,
+#request-quote .form-group select:focus,
+#request-quote .form-group textarea:focus {
+    background: rgba(255, 255, 255, 1);
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+}
+
+/* زر الإرسال */
+#request-quote .btn-submit,
+#request-quote .btn-primary {
+    background: linear-gradient(135deg, #28a745 0%, #20923a 100%);
+    border: none;
+    color: white !important;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+#request-quote .btn-submit:hover,
+#request-quote .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(40, 167, 69, 0.4);
+    background: linear-gradient(135deg, #20923a 0%, #1e7e34 100%);
+}
+
+/* أيقونة الزر */
+#request-quote .btn-primary i {
+    color: white !important;
+    margin-left: 8px;
+}
+
+/* تأثيرات إضافية للشفافية */
+@supports (backdrop-filter: blur(10px)) {
+    #contact.contact-section,
+    #request-quote.service-section {
+        background: rgba(255, 255, 255, 0.7);
+    }
+}
+
+/* للمتصفحات التي لا تدعم backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+    #contact.contact-section {
+        background: rgba(255, 255, 255, 0.95);
+    }
+    
+    #request-quote.service-section {
+        background: rgba(248, 249, 250, 0.95);
+    }
+}
+
+/* تحسينات للشاشات الصغيرة */
+@media (max-width: 768px) {
+    #contact .contact-card,
+    #request-quote .quote-form {
+        background: rgba(255, 255, 255, 0.95);
+    }
+    
+    #contact.contact-section,
+    #request-quote.service-section {
+        background: rgba(255, 255, 255, 0.9);
+    }
+}
+
+/* تأثيرات حركية للخلفية */
+#contact.contact-section::before,
+#request-quote.service-section::before {
+    animation: backgroundShift 20s ease-in-out infinite;
+}
+
+@keyframes backgroundShift {
+    0%, 100% {
+        opacity: 0.1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.2;
+        transform: scale(1.05);
+    }
+}
+
+/* تنسيق أيقونات التواصل الاجتماعي في الفوتر */
+.footer-social a {
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    color: white !important;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(74, 144, 226, 0.3);
+}
+
+.footer-social a:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 6px 20px rgba(74, 144, 226, 0.4);
+}
+
+.footer-social a i {
+    color: white !important;
+    font-size: 16px;
+}
+
+/* أيقونات مختلفة لكل منصة */
+.footer-social a[href*="facebook"] {
+    background: linear-gradient(135deg, #3b5998 0%, #2d4373 100%);
+    box-shadow: 0 3px 10px rgba(59, 89, 152, 0.3);
+}
+
+.footer-social a[href*="facebook"]:hover {
+    box-shadow: 0 6px 20px rgba(59, 89, 152, 0.4);
+}
+
+.footer-social a[href*="instagram"] {
+    background: linear-gradient(135deg, #e4405f 0%, #c13584 100%);
+    box-shadow: 0 3px 10px rgba(228, 64, 95, 0.3);
+}
+
+.footer-social a[href*="instagram"]:hover {
+    box-shadow: 0 6px 20px rgba(228, 64, 95, 0.4);
+}
+
+.footer-social a[href*="twitter"] {
+    background: linear-gradient(135deg, #1da1f2 0%, #0d8bd9 100%);
+    box-shadow: 0 3px 10px rgba(29, 161, 242, 0.3);
+}
+
+.footer-social a[href*="twitter"]:hover {
+    box-shadow: 0 6px 20px rgba(29, 161, 242, 0.4);
+}
+
+.footer-social a[href*="youtube"] {
+    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+    box-shadow: 0 3px 10px rgba(255, 0, 0, 0.3);
+}
+
+.footer-social a[href*="youtube"]:hover {
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.4);
+}

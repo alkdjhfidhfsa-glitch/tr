@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء صور تجريبية</title>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            padding: 20px;
+            background: #f8f9fa;
+        }
+        .placeholder {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px 0;
+            border-radius: 10px;
+        }
+        .hero-placeholder {
+            height: 500px;
+        }
+        .work-placeholder {
+            height: 250px;
+        }
+        .logo-placeholder {
+            width: 200px;
+            height: 80px;
+            background: white;
+            color: #333;
+            font-size: 18px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            color: #333;
+            margin: 30px 0 15px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .instructions {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="instructions">
+            <h1>🎨 دليل إنشاء الصور للموقع</h1>
+            <p>هذه الصفحة تعرض أحجام الصور المطلوبة للموقع. يمكنك استخدام هذه المعلومات لإنشاء الصور الفعلية.</p>
+            
+            <h3>📋 قائمة الصور المطلوبة:</h3>
+            <ul>
+                <li><strong>الشعار:</strong> logo.png (200x80 بكسل)</li>
+                <li><strong>صور البانر:</strong> hero-1.jpg إلى hero-4.jpg (1920x500 بكسل)</li>
+                <li><strong>صور الأعمال:</strong> work-1.jpg إلى work-6.jpg (400x250 بكسل)</li>
+            </ul>
+            
+            <h3>💡 نصائح:</h3>
+            <ul>
+                <li>استخدم صور عالية الجودة من الموقع الأصلي</li>
+                <li>احفظ الصور بصيغة WebP للحصول على أفضل أداء</li>
+                <li>ضغط الصور مهم لسرعة التحميل</li>
+            </ul>
+        </div>
+
+        <h2>🖼️ الشعار</h2>
+        <div class="placeholder logo-placeholder">
+            شعار مظلات الدعجاني<br>
+            200x80 بكسل
+        </div>
+
+        <h2>🎬 صور البانر الرئيسي</h2>
+        <div class="placeholder hero-placeholder">
+            بيوت شعر ملكي<br>
+            hero-1.jpg (1920x500)
+        </div>
+        <div class="placeholder hero-placeholder">
+            سواتر حديد<br>
+            hero-2.jpg (1920x500)
+        </div>
+        <div class="placeholder hero-placeholder">
+            برجولات خشبية<br>
+            hero-3.jpg (1920x500)
+        </div>
+        <div class="placeholder hero-placeholder">
+            مظلات الشد الانشائي<br>
+            hero-4.jpg (1920x500)
+        </div>
+
+        <h2>🏗️ صور آخر الأعمال</h2>
+        <div class="grid">
+            <div class="placeholder work-placeholder">
+                مظلات مجدول<br>
+                work-1.jpg (400x250)
+            </div>
+            <div class="placeholder work-placeholder">
+                جلسات خارجية<br>
+                work-2.jpg (400x250)
+            </div>
+            <div class="placeholder work-placeholder">
+                برجولات حدائق<br>
+                work-3.jpg (400x250)
+            </div>
+            <div class="placeholder work-placeholder">
+                سواتر بلاستيك<br>
+                work-4.jpg (400x250)
+            </div>
+            <div class="placeholder work-placeholder">
+                بيوت شعر ملكي<br>
+                work-5.jpg (400x250)
+            </div>
+            <div class="placeholder work-placeholder">
+                مظلات مسابح<br>
+                work-6.jpg (400x250)
+            </div>
+        </div>
+
+        <div class="instructions" style="margin-top: 40px;">
+            <h3>🚀 الخطوات التالية:</h3>
+            <ol>
+                <li>احفظ الصور من الموقع الأصلي</li>
+                <li>قم بتغيير أحجامها حسب المطلوب</li>
+                <li>احفظها في مجلد images/ بالأسماء المحددة</li>
+                <li>افتح index.html لرؤية النتيجة النهائية</li>
+            </ol>
+            
+            <p><strong>ملاحظة:</strong> يمكنك استخدام أدوات مثل Photoshop أو GIMP أو أدوات أونلاين لتعديل أحجام الصور.</p>
+        </div>
+    </div>
+
+    <script>
+        // إنشاء صور تجريبية باستخدام Canvas
+        function createPlaceholderImage(width, height, text, filename) {
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, width, height);
+            gradient.addColorStop(0, '#667eea');
+            gradient.addColorStop(1, '#764ba2');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, width, height);
+            
+            // Text
+            ctx.fillStyle = 'white';
+            ctx.font = 'bold 24px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText(text, width/2, height/2);
+            
+            // Convert to blob and download
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = filename;
+                a.click();
+                URL.revokeObjectURL(url);
+            }, 'image/jpeg', 0.9);
+        }
+
+        // إضافة أزرار التحميل
+        document.addEventListener('DOMContentLoaded', function() {
+            const downloadBtn = document.createElement('button');
+            downloadBtn.textContent = '📥 تحميل جميع الصور التجريبية';
+            downloadBtn.style.cssText = `
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                border: none;
+                padding: 15px 25px;
+                border-radius: 25px;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+                z-index: 1000;
+            `;
+            
+            downloadBtn.addEventListener('click', function() {
+                // تحميل الشعار
+                createPlaceholderImage(200, 80, 'مظلات الدعجاني', 'logo.jpg');
+                
+                // تحميل صور البانر
+                setTimeout(() => createPlaceholderImage(1920, 500, 'بيوت شعر ملكي', 'hero-1.jpg'), 100);
+                setTimeout(() => createPlaceholderImage(1920, 500, 'سواتر حديد', 'hero-2.jpg'), 200);
+                setTimeout(() => createPlaceholderImage(1920, 500, 'برجولات خشبية', 'hero-3.jpg'), 300);
+                setTimeout(() => createPlaceholderImage(1920, 500, 'مظلات الشد الانشائي', 'hero-4.jpg'), 400);
+                
+                // تحميل صور الأعمال
+                const works = ['مظلات مجدول', 'جلسات خارجية', 'برجولات حدائق', 'سواتر بلاستيك', 'بيوت شعر ملكي', 'مظلات مسابح'];
+                works.forEach((work, index) => {
+                    setTimeout(() => createPlaceholderImage(400, 250, work, `work-${index + 1}.jpg`), 500 + (index * 100));
+                });
+                
+                alert('سيتم تحميل جميع الصور التجريبية. احفظها في مجلد images/');
+            });
+            
+            document.body.appendChild(downloadBtn);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+/* ملف إصلاح مشكلة اختفاء البيانات عند الـ hover */
+
+/* إزالة جميع تأثيرات الـ hover المسببة للمشاكل */
+.premium-card::before,
+.premium-card::after,
+.service-card::before,
+.service-card::after {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+.card-background,
+.card-hover-effect,
+.icon-glow {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+/* ضمان عرض جميع العناصر دائماً */
+.premium-card,
+.premium-card *,
+.service-card,
+.service-card * {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* حماية خاصة عند الـ hover */
+.premium-card:hover,
+.premium-card:hover *,
+.service-card:hover,
+.service-card:hover * {
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: inherit !important;
+    background: inherit !important;
+    transform: none !important;
+}
+
+/* تأكيد عرض العناصر المهمة */
+.premium-card h4,
+.premium-card p,
+.premium-card .service-link,
+.premium-card .service-icon-wrapper,
+.premium-card .service-icon-wrapper i,
+.premium-card:hover h4,
+.premium-card:hover p,
+.premium-card:hover .service-link,
+.premium-card:hover .service-icon-wrapper,
+.premium-card:hover .service-icon-wrapper i {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    pointer-events: auto !important;
+}
+
+/* إصلاح عرض الأيقونات - حماية قوية */
+.premium-card .service-icon-wrapper,
+.premium-card:hover .service-icon-wrapper,
+.premium-card:focus .service-icon-wrapper,
+.premium-card:active .service-icon-wrapper {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: linear-gradient(45deg, #4a90e2, #357abd) !important;
+    border-radius: 50% !important;
+    width: 80px !important;
+    height: 80px !important;
+    margin: 0 auto 1.5rem !important;
+    position: relative !important;
+    z-index: 10 !important;
+}
+
+.premium-card .service-icon-wrapper i,
+.premium-card:hover .service-icon-wrapper i,
+.premium-card:focus .service-icon-wrapper i,
+.premium-card:active .service-icon-wrapper i {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    color: white !important;
+    font-size: 2rem !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative !important;
+    z-index: 11 !important;
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+}
+
+/* إصلاح عرض الروابط */
+.premium-card .service-link,
+.premium-card:hover .service-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+}
+
+/* منع أي تأثير يخفي العناصر */
+.premium-card:hover {
+    background: white !important;
+    transform: none !important;
+}
+
+/* تأثير hover بسيط وآمن */
+.premium-card:hover {
+    box-shadow: 0 8px 20px rgba(74, 144, 226, 0.15) !important;
+}
+
+/* حماية إضافية للأيقونات من الاختفاء */
+.fas,
+.fab,
+.far {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+}
+
+/* حماية خاصة لأيقونات البطاقات */
+.premium-card i,
+.premium-card:hover i,
+.service-card i,
+.service-card:hover i {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+    color: white !important;
+    font-size: 2rem !important;
+    position: relative !important;
+    z-index: 999 !important;
+}
+
+/* منع أي تأثير يخفي الأيقونات */
+.premium-card .service-icon-wrapper::before,
+.premium-card .service-icon-wrapper::after,
+.premium-card:hover .service-icon-wrapper::before,
+.premium-card:hover .service-icon-wrapper::after {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+/* تأكيد عرض الأيقونات في جميع الحالات - فقط لبطاقات الخدمات */
+.premium-card .fas,
+.premium-card:hover .fas,
+.premium-card .service-icon-wrapper .fas,
+.premium-card:hover .service-icon-wrapper .fas {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* إصلاح أيقونات التواصل الاجتماعي في الفوتر */
+.footer-social {
+    display: flex !important;
+    gap: 15px !important;
+    margin-top: 20px !important;
+}
+
+.footer-social a {
+    width: 40px !important;
+    height: 40px !important;
+    background: #34495e !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    color: white !important;
+    text-decoration: none !important;
+    transition: all 0.3s ease !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.footer-social a i {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
+    color: white !important;
+    font-size: 16px !important;
+    font-family: "Font Awesome 6 Brands" !important;
+    font-weight: 400 !important;
+}
+
+.footer-social a:hover {
+    background: #667eea !important;
+    transform: translateY(-3px) !important;
+}
+
+/* إصلاح أيقونات Font Awesome للتواصل الاجتماعي */
+.fab {
+    font-family: "Font Awesome 6 Brands" !important;
+    font-weight: 400 !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: inline-block !important;
+}

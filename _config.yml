@@ -1,0 +1,63 @@
+# GitHub Pages Configuration for MRW Website
+title: "مؤسسة الرياض الغربية - MRW Company"
+description: "الموقع الرسمي لشركة مؤسسة الرياض الغربية - متخصصون في المظلات والسواتر والإنشاءات المعدنية"
+baseurl: "/ooj"
+url: "https://djjdkkfgg-eng.github.io"
+
+# Language and text direction
+lang: ar
+direction: rtl
+
+# Theme settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - tests/
+  - node_modules/
+  - vendor/
+  - .github/
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - GITHUB_DEPLOYMENT.md
+
+# Include files
+include:
+  - _pages
+  - assets
+  - css
+  - js
+  - images
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+
+# Pagination
+paginate: 10
+paginate_path: "/page:num/"
+
+# Social media links
+social:
+  phone: "+966xxxxxxxxx"
+  email: "info@mrw-company.sa"
+  location: "الرياض، المملكة العربية السعودية"
+
+# SEO settings
+author: "MRW Company"
+twitter:
+  card: summary_large_image
+facebook:
+  app_id: ""
+  publisher: ""
+  admins: ""
+
+# Google Analytics (if needed)
+google_analytics: ""
+
+# Site verification (if needed)
+google_site_verification: ""
