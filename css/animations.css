@@ -1037,7 +1037,7 @@
 
     /* إعادة توزيع مواضع الصور لمنع التداخل على الجوال */
     .floating-image-1 {
-        top: 0;
+        top: 10px;
         left: 6%;
         width: 120px;
         height: 80px;
@@ -1058,19 +1058,24 @@
         height: 80px;
     }
 
-    /* تقليل سعة الحركة لصور قسم من نحن فقط على الجوال */
+    /* حركة + تلاشي خفيف لصور قسم من نحن على الجوال */
     .about-images-section img.animate-float,
     .about-images-section img.animate-float-delayed,
     .about-images-section img.animate-float-slow {
-        animation-name: about-float-sm;
-        animation-duration: 6s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
+        animation-name: about-float-sm about-fade-sm;
+        animation-duration: 6s, 6s;
+        animation-timing-function: ease-in-out, ease-in-out;
+        animation-iteration-count: infinite, infinite;
     }
 
     @keyframes about-float-sm {
         0%, 100% { transform: translateY(0); }
         50% { transform: translateY(-8px); }
+    }
+
+    @keyframes about-fade-sm {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.6; }
     }
 
     .services-title {
