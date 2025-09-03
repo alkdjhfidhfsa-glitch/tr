@@ -1032,14 +1032,45 @@
     }
 
     .about-images-section {
-        height: 200px;
+        height: 320px;
     }
 
-    .floating-image-1,
-    .floating-image-2,
-    .floating-image-3 {
+    /* إعادة توزيع مواضع الصور لمنع التداخل على الجوال */
+    .floating-image-1 {
+        top: 0;
+        left: 6%;
         width: 120px;
         height: 80px;
+    }
+
+    .floating-image-2 {
+        top: 130px;
+        right: 6%;
+        width: 120px;
+        height: 80px;
+    }
+
+    .floating-image-3 {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 80px;
+    }
+
+    /* تقليل سعة الحركة لصور قسم من نحن فقط على الجوال */
+    .about-images-section img.animate-float,
+    .about-images-section img.animate-float-delayed,
+    .about-images-section img.animate-float-slow {
+        animation-name: about-float-sm;
+        animation-duration: 6s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    @keyframes about-float-sm {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-8px); }
     }
 
     .services-title {
