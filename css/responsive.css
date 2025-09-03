@@ -435,7 +435,7 @@
     /* Override only the main Services section grid on mobile */
     #services .services-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 12px; /* Optional tighter spacing for small screens */
+        gap: 6px; /* Tighter spacing for small screens */
     }
     
     .service-card {
@@ -894,6 +894,31 @@ img, video, svg, canvas {
 @media (max-width: 640px) {
   #services .services-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-    gap: 12px;
+    gap: 6px;
+  }
+
+  /* Make service card edges tighter around image area on mobile */
+  #services .service-item {
+    border-radius: 10px;
+    overflow: hidden; /* ensure image fills edge-to-edge */
+  }
+
+  /* Enlarge image area and fill width, keep height proportional */
+  #services .service-image-container {
+    width: 100%;
+    aspect-ratio: 3 / 2; /* keep proportion; larger visual area */
+    overflow: hidden;
+  }
+
+  #services .service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* crop edges slightly to fill */
+    display: block;
+  }
+
+  /* Keep text padding compact */
+  #services .service-content {
+    padding: 8px 10px;
   }
 }
