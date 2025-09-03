@@ -889,3 +889,11 @@ img, video, svg, canvas {
   .price-item { padding: 16px 12px; }
   .footer-social a { width: 32px; height: 32px; font-size: 13px; }
 }
+
+/* Ensure 2 columns on mobile for main Services grid and slightly larger phones */
+@media (max-width: 640px) {
+  #services .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px;
+  }
+}
